@@ -5,4 +5,3 @@ db-config.php
 send-mail.php
 no-cache.php
 .DS_Store
-php-fpm
