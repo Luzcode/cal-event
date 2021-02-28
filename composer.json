@@ -1,0 +1,7 @@
+{
+    "require": {
+        "adudjandaniel/php_dump": "^1.0",
+        "phpmailer/phpmailer": "^6.1",
+        "google/apiclient": "^2.0"
+    }
+}

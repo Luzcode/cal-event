@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="643" height="226" viewBox="0 0 643 226">
+  <g id="logo-black-text" transform="translate(-447 -441)">
+    <g id="luzcode-logo-black" transform="translate(0 434.516)">
+      <path id="Exclusion_1" data-name="Exclusion 1" d="M154,198h-1.232V172.976H154V198Zm-4.312,0h-2.156V172.976h2.156V198Zm-5.236,0h-3.08V172.976h3.08V198Zm-6.16,0h-3.081V172.976h3.081V198Zm-6.161,0H127.2V172.976h4.927V198Zm-8.008,0H119.2V172.976h4.927V198Zm-8.007,0h-6.16V172.976h6.16V198Zm-9.24,0H100.1V172.976h6.776V198Zm-9.856,0h-7.7V172.976h7.7V198Zm-10.78,0h-7.7V172.976h7.7V198Zm-10.78,0H66.836V172.976H75.46V198Zm-11.7,0H53.9V172.976h9.856V198ZM50.82,198H40.04V172.976H50.82V198Zm-13.86,0H0V0H27.1V172.976H36.96V198Z" transform="translate(447 6.484)" fill="#fff"/>
+    </g>
+    <text id="uzcode" transform="translate(598 635)" fill="#9f9d9d" font-size="150" font-family="HelveticaNeue, Helvetica Neue, Segoe UI, Roboto, Arial, Noto Sans, sans-serif"><tspan x="0" y="0">uzcode</tspan></text>
+  </g>
+</svg>
