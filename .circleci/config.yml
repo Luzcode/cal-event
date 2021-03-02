@@ -12,6 +12,8 @@ workflows:
           requires:
             - build
       - push:
+          context:
+            - Default
           filters:
             branches:
               only:
@@ -42,4 +44,7 @@ jobs:
           command: composer install
       - gcp-cli/install
       - gcp-cli/initialize
+      - run:
+          name: "echo environment variables from org-global Default context"
+          command: echo $MY_ENV_VAR
       - run: ls ~/cal-event
