@@ -17,8 +17,8 @@ workflows:
               only:
                 - main
                 - circleci
-            requires:
-              - approve_to_push
+          requires:
+            - approve_to_push
 
 jobs:
   build:
