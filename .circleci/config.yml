@@ -24,7 +24,7 @@ jobs:
   build:
     working_directory: ~/cal-event
     docker:
-      - image: docker/compose
+      - image: composer
     steps:
       - checkout
       - run:
