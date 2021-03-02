@@ -32,7 +32,13 @@ jobs:
           command: composer install
   push:
     working_directory: ~/cal-event
+    docker:
+      - image: composer
     executor: gcp-cli/default
     steps:
+      - checkout
+      - run:
+          name: Compose
+          command: composer install
       - gcp-cli/install
       - run: ls ~/cal-event
