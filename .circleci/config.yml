@@ -44,3 +44,7 @@ jobs:
       - gcp-cli/install
       - gcp-cli/initialize
       - run: ls ~/cal-event
+      - run:
+          name: Push to labs
+          command: |
+            gcloud compute scp --recurse ~/cal-event add-lamp-vm:/var/www/labs/html/cal-event
