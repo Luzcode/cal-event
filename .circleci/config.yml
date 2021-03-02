@@ -18,7 +18,6 @@ workflows:
             branches:
               only:
                 - main
-                - circleci
           requires:
             - approve_to_push
 
@@ -44,7 +43,4 @@ jobs:
           command: composer install
       - gcp-cli/install
       - gcp-cli/initialize
-      - run:
-          name: "echo environment variables from org-global Default context"
-          command: echo $MY_ENV_VAR
       - run: ls ~/cal-event
