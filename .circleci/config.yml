@@ -34,5 +34,5 @@ jobs:
     working_directory: ~/cal-event
     executor: gcp-cli/default
     steps:
-      - gcp-cli/install_and_initialize_cli
+      - gcp-cli/install
       - run: ls ~/cal-event
