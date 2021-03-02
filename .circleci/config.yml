@@ -8,27 +8,28 @@ workflows:
     jobs:
       - build
       - approve_to_push:
-        type: approval
-        requires:
-          - build
-      - push:
-        - filters:
-          branches:
-            only:
-              - main
-              - circleci
+          type: approval
           requires:
-            - approve_to_push
+            - build
+      - push:
+          filters:
+            branches:
+              only:
+                - main
+                - circleci
+            requires:
+              - approve_to_push
 
 jobs:
   build:
     working_directory: ~/cal-event
-    docker: docker/compose
+    docker:
+      - image: docker/compose
     steps:
       - checkout
       - run:
-        name: Compose
-        command: composer install
+          name: Compose
+          command: composer install
   push:
     working_directory: ~/cal-event
     executor: gcp-cli/default
