@@ -47,4 +47,4 @@ jobs:
       - run:
           name: Push to labs
           command: |
-            gcloud compute scp --recurse ~/cal-event add-lamp-vm:/var/www/labs/html/cal-event
+            gcloud compute scp --recurse ~/cal-event add-lamp-vm:/var/www/labs/html/cal-event --ssh-key-file=${HOME}/gcloud-service-key.json
