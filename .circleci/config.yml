@@ -1,0 +1,37 @@
+version: 2.1
+
+orbs:
+  gcp-cli: circleci/gcp-cli@2.1.0
+
+workflows:
+  compose_push:
+    jobs:
+      - build
+      - approve_to_push:
+        type: approval
+        requires:
+          - build
+      - push:
+        - filters:
+          branches:
+            only:
+              - main
+              - circleci
+          requires:
+            - approve_to_push
+
+jobs:
+  build:
+    working_directory: ~/cal-event
+    docker: docker/compose
+    steps:
+      - checkout
+      - run:
+        name: Compose
+        command: composer install
+  push:
+    working_directory: ~/cal-event
+    executor: gcp-cli/default
+    steps:
+      - gcp-cli/install_and_initialize_cli
+      - run: ls ~/cal-event
